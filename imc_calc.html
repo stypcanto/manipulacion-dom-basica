@@ -1,7 +1,5 @@
-<!-- Manipulación del DOM, este es el archivo 3 -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -12,23 +10,33 @@
 </head>
 
 <body>
-    <h1>Calculadora IMC</h1>
-
-
-    <form id="form">
+    <div class="container">
+        <h1>Calculadora IMC</h1>
+        <div class="image-container">
+            <img src="nutrici.png" alt="nutricionista">
+        </div>
+       
         
-        <input id="calculo2" placeholder="Ingrese talla (m)" />
-        <input id="calculo1" placeholder="Ingrese peso (Kg)" />
-        <button type="button" class="boton" id="btnIMC"> Cálculo IMC </button>
-        <button type="button" class="boton" id="btnReset">Reiniciar</button>
-        <p id="result"> </p>
-    </form>
 
+        <form id="form">
+            <div class="form-group">
+                <label for="calculo2">Ingrese talla:</label>
+                <input type="number" id="calculo2" class="calculo2" placeholder="Valor en metros" required>
+            </div>
 
-    
+            <div class="form-group">
+                <label for="calculo1">Ingrese peso:</label>
+                <input type="number" id="calculo1" class="calculo1" placeholder="Valor en Kg" required>
+            </div>
+
+            <button type="button" class="boton" id="btnIMC">Cálculo IMC</button>
+            <button type="button" class="boton" id="btnReset">Reiniciar</button>
+
+            <p id="result"></p>
+        </form>
+    </div>
 
     <script src="script_imc.js"></script>
-
 </body>
 
 </html>

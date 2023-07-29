@@ -6,56 +6,46 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f5f5f5;
+    background-color: #00064e;
 }
+
+
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #00064e;
+    margin-bottom: 20px;
 }
 
-
-.boton {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 3px;
-    background-color: #306155;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-form {
+.form-group {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 15px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    max-width: 400px;
-    width: 100%;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+label {
+    flex-basis: 150px;
+    color: #00064e;
+    font-weight: bold;
 }
 
 input {
-    width: 100%;
+    flex: 1;
     padding: 10px;
-    margin: 5px 0;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 5px;
     font-size: 16px;
     outline: none;
 }
 
-
 button {
+    display: block;
+    width: 100%;
     padding: 10px 20px;
     margin-top: 10px;
     border: none;
     border-radius: 3px;
-    background-color: #007bff;
+    background-color: #00064e;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -66,14 +56,57 @@ p#result {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    color: #007bff;
+    color: #00064e;
 }
 
-input.calculo1,input.calculo2 {
-    /* Estilos específicos para el input con la clase "calculo2 y calculo2" */
+input.calculo1,
+input.calculo2 {
     background-color: #f9f9f9;
     color: #333;
-    font-weight: bold;
-    border-color: #007bff;
-    border-radius: 15px;
+    border-color: #00064e;
+    border-radius: 7px;
+}
+
+
+
+.container {
+    /* Estilos del contenedor del formulario */
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    width: 100%;
+   
+}
+
+.image-container {
+    /* Estilos del contenedor de la imagen */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ajusta el ancho de la imagen según prefieras */
+    height: 100%;
+    z-index: -1; /* Para que la imagen esté detrás del contenido */
+}
+
+.image-container img {
+    /* Estilos de la imagen */
+    width: 50%;
+    height: 100%;
+    object-fit: cover; /* Para ajustar la imagen al tamaño del contenedor */
+    opacity: 0.8; /* Puedes ajustar la opacidad según prefieras */
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambiar a una columna en dispositivos móviles */
+    }
+    .image-container {
+        top: 70px;
+        left: 2;
+        width: 100%; /* La imagen ocupará el ancho completo en dispositivos móviles */
+        height: 200px; /* Ajusta la altura de la imagen según prefieras */
+    }
 }

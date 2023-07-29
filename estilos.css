@@ -14,12 +14,23 @@ h1 {
     color: #333;
 }
 
+
+.boton {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 3px;
+    background-color: #306155;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 form {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 20px;
-    margin-left: 50px;
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     background-color: #fff;
@@ -36,6 +47,7 @@ input {
     font-size: 16px;
     outline: none;
 }
+
 
 button {
     padding: 10px 20px;

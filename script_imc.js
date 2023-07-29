@@ -19,18 +19,24 @@ function IMCInputValues(){
 
     if(!isNaN(peso) && !isNaN(altura))
     {
-      const IMCInputs = peso / ((altura/100) ** 2);
-      pResult.innerHTML = "El índice corporal es: " + IMCInputs.toFixed(2) + "<br>";
+      const IMCInputs = peso / ((altura) ** 2);
+      pResult.innerHTML = "El IMC es: " + IMCInputs.toFixed(2) + "<br>";
 
       // Determinar el nivel de peso según el IMC
-      if (IMCInputs < 18.5) {
-          pResult.innerHTML += "Nivel de peso: Bajo peso";
+      if (IMCInputs < 16.9) {
+          pResult.innerHTML += "Nivel de composición corporal: Muy bajo peso";
+      } else if (IMCInputs >= 17.0 && IMCInputs <= 18.4) {
+          pResult.innerHTML += "Nivel de composición corporal: Bajo peso";
       } else if (IMCInputs >= 18.5 && IMCInputs <= 24.9) {
-          pResult.innerHTML += "Nivel de peso: Normal";
+          pResult.innerHTML += "Nivel de composición corporal: Normal";
       } else if (IMCInputs >= 25.0 && IMCInputs <= 29.9) {
-          pResult.innerHTML += "Nivel de peso: Sobrepeso";
-      } else {
-          pResult.innerHTML += "Nivel de peso: Obesidad";
+        pResult.innerHTML += "Nivel de composición corporal: Sobrepeso";
+      }else if (IMCInputs >= 30.0 && IMCInputs <= 34.9) {
+        pResult.innerHTML += "Nivel de composición corporal: Obesidad";
+      }else if (IMCInputs >= 35.0 && IMCInputs <= 39.9) {
+        pResult.innerHTML += "Nivel de composición corporal: Obesidad marcada";
+      }else {
+          pResult.innerHTML += "Nivel de composición corporal: Obesidad mórbida";
       }
     } else {
       pResult.innerHTML = "Por favor ingresa valores válidos en ambos campos";

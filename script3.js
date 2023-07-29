@@ -28,10 +28,24 @@ const pResult = document.querySelector('#result')
 
 //OPCION 3 usando boton
 
+
+
 btn.addEventListener('click',sumarInputValues);
 
 function sumarInputValues(){
+    const valor1 = parseInt(input1.value);
+    const valor2 = parseInt(input2.value);
     
-    const sumaInputs = input1.value + input2.value;
-    pResult.innerHTML = "Resultado: " + sumaInputs;
+/* 
+En la expresión, isNaN(valor1) devuelve true si valor1 no es un número y false si es un número válido. Al agregar el operador lógico de negación ! delante de isNaN(valor1), estamos invirtiendo el resultado, es decir, si valor1 es un número válido, la expresión !isNaN(valor1) será true, y si no es un número válido (es NaN), la expresión será false.
+*/
+
+    if(!isNaN(valor1) && !isNaN(valor2))
+    {
+      const sumaInputs = valor1+ valor2;
+      pResult.innerHTML = "Resultado: " + sumaInputs;
+    }else{
+      pResult.innerHTML = "Por favor ingresa números válidos en ambos campos"
+    }
+    
 }
